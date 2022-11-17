@@ -4,8 +4,8 @@ for i in $services
 do
         ps -C $i
         if [ $? -ne 0 ]
-        then
-                echo "send a query testing clone1"
+        then  
+                echo "send a query deepak clone"
 fi
 done
 
