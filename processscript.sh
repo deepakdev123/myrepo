@@ -5,7 +5,7 @@ do
         ps -C $i
         if [ $? -ne 0 ]
         then
-                echo "send a query testing clone"
+                echo "send a query testing clone1"
 fi
 done
 
