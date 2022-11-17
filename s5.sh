@@ -7,5 +7,5 @@ then
         echo "The below files contains the pattern $string"
         cat patornot
 else
-        echo "The files does not contain the pattern $string"
+        echo "vineesh is commiting a clone"
 fi
