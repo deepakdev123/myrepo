@@ -5,7 +5,7 @@ do
         ps -C $i
         if [ $? -ne 0 ]
         then
-                echo "send a query deepak clone"
+                echo "send a query VINEESH clone"
 fi
 done
 
