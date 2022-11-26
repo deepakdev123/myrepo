@@ -12,6 +12,6 @@ echo "the sum of two numbers is:$c"
 "02")  c=`expr  $a - $b`
 echo "the diff of two numbers is:$c"
 ;;
-*) echo "invalid option"
+*) echo "invalid option u hv entered"
 ;;
 esac
