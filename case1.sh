@@ -15,4 +15,4 @@ echo "the diff of two numbers is:$c"
 *) echo "Not valid"
 ;;
 esac
-echo "hi"
+echo "hi deep"
