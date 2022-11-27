@@ -8,7 +8,7 @@ diff=$(echo "$a - $b" | bc )
 prod=$(echo "$a * $b" | bc )
 div=$(echo "scale=2; $a / $b" | bc -l )
 
-echo "the sum of the values is $sum"
+echo "the sum of the two values is $sum"
 echo "the difference of the values is $diff"
 echo "the product of the values is $prod"
 echo "the quotient of the values is $div"
