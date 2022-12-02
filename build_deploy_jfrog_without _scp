@@ -1,0 +1,27 @@
+pipeline {
+  agent none
+  stages {
+    stage ('Build') {
+      agent { label 'build2' }
+      steps {
+        sh "echo ${BUILD_VERSION}"
+        sh 'mvn deploy'
+        sh 'pwd'
+      }
+    }
+    stage ('Deploy') {
+      agent { label 'build_server' }
+      steps {
+        sh 'pwd'
+        sh 'whoami'
+        sh 'curl -u mysurudev@gmail.com:Hankoo@891 -O https://deepakdev123.jfrog.io/artifactory/libs-release-local/com/efsavage/hello-world-war/${BUILD_VERSION}/hello-world-war-${BUILD_VERSION}.war'
+        sh 'sudo cp -R hello-world-war-${BUILD_VERSION}.war /opt/apache-tomcat-10.0.27/webapps/'
+        sh 'sudo sh /opt/apache-tomcat-10.0.27/bin/shutdown.sh'
+        sh 'sleep 3'
+        sh 'sudo sh /opt/apache-tomcat-10.0.27/bin/startup.sh'
+      }
+    }
+  }
+}
+#The given above is parameterised pipeline usig default value 7.7.7, if we use BUILD_NUMBER in place of BUILD_VERSION we get war file number according to the jenkins particular job build number
+#change name to BUILD_NUMBER even in pom.xml, In build server, java,maven shud be installed --- in deploy server,java,maven,tomcat shud be installed
