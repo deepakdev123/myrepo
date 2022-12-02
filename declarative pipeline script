@@ -17,3 +17,4 @@ pipeline {
    }
   }
 }
+#before doing this make a passwordless connection between build server and deploy server
