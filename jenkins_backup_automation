@@ -1,0 +1,15 @@
+#!/bin/bash
+cp -r /var/lib/jenkins/* /root/jenkin_backup/
+cd /root/jenkin_backup
+rm -rf caches/
+token="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"
+username="deepakdev123"
+repoName="jenkins_backup"
+day=`date '+%D'`
+time=`date '+%T'`
+git status
+git remote set-url origin https://${token}@github.com/${username}/${repoName}.git
+git add .
+git commit -m "jenkins_backup date-$day time-$time"
+git push origin master
+#use this script in crontab to automate backup files everyday
