@@ -24,4 +24,4 @@ pipeline {
   }
 }
 #The given above is parameterised pipeline usig default value 7.7.7, if we use BUILD_NUMBER in place of BUILD_VERSION we get war file number according to the jenkins particular job build number
-#change name to BUILD_NUMBER even in pom.xml, In build server, java,maven shud be installed --- in deploy server,java,maven,tomcat shud be installed
+#change name to BUILD_NUMBER even in pom.xml, In build server, java,maven shud be installed --- in deploy server,java,maven,tomcat shud be installed. In first server jfrog has to be setup and configured
