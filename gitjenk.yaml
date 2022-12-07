@@ -1,0 +1,9 @@
+---
+- name: creating new files and directories
+  hosts: all
+  tasks:
+    - name: only file
+      file:
+        path: /root/mysore
+        state: touch
+        mode: 0777
