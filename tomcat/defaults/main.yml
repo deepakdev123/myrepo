@@ -1,0 +1,12 @@
+---
+# defaults file for tomcat
+
+java_package: default-jdk
+tomcat_url: https://dlcdn.apache.org/tomcat/tomcat-10/v10.0.27/bin/apache-tomcat-10.0.27.tar.gz
+destination_folder: /opt/
+destination_folder_path: /opt/apache-tomcat-10.0.27.tar.gz
+tomcat_port_number: "8020"
+tomcat_server_path: /opt/apache-tomcat-10.0.27/conf/server.xml
+tomcat_users_path: /opt/apache-tomcat-10.0.27/conf/tomcat-users.xml
+tomcat_manager_path: /opt/apache-tomcat-10.0.27/webapps/manager/META-INF/context.xml
+tomcat_host_manager_path: /opt/apache-tomcat-10.0.27/webapps/host-manager/META-INF/context.xml
