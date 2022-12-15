@@ -1,0 +1,6 @@
+---
+# handlers file for tomcat
+- name: restart tomcat
+  shell: |
+    nohup "{{ destination_folder }}"apache-tomcat-10.0.27/bin/shutdown.sh &
+    nohup "{{ destination_folder }}"apache-tomcat-10.0.27/bin/startup.sh &
