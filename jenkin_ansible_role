@@ -1,0 +1,21 @@
+# tasks file for jenkins
+ - hosts: all
+   tasks:
+    - name: ensure the jenkins apt repository key is installed
+      apt_key:
+        url: "{{ jenkins_url }}"
+        state: present
+      become: yes
+
+    - name: ensure the repository is configured
+      apt_repository:
+        repo: "{{ repo_configuration }}"
+        state: present
+      become: yes
+
+    - name: ensure jenkins is installed
+      apt: name=jenkins update_cache=yes
+      become: yes
+
+    - name: ensure jenkins is running
+      service: name=jenkins state=started
